@@ -1,4 +1,4 @@
-# Boundless Test PKI Certificates/Keys
+# Boundless Test Certificates/Keys
 
 The certs/keys are generated/edited using **XCA** (see xca-project directory):
 
@@ -9,11 +9,11 @@ The Java keystore files are generated/edited using **KeyStore Explorer**:
     http://keystore-explorer.sourceforge.net/
 
 
-The generic default password for the encrypted XCA project and Java keystore
-files is **password**. The certificate signing structure can be reviewed in
+The default password for the encrypted XCA project and Java keystore files is
+**password**. The certificate signing structure can be reviewed in
 `certs_hierarchy.png`.
 
-**WARNING**: These PKI components are just for testing and should _NOT_ be used
+**WARNING**: These components are just for testing and should _NOT_ be used
 in a production environment.
 
 *NOTE*: The `.[crt|pem]` choice for files (below) is because some applications
@@ -32,7 +32,7 @@ filter file open dialogs to specific extensions, e.g. pgAdmin3 always filters
 
 * Combined user certs/keys:  `[alice|tom|jane|joe].p12`
 
-The generic default password for encrypted client keys is **password**.
+The default password for encrypted client keys is **password**.
 
 ## Client-side Certificate Authorities
 
@@ -61,7 +61,7 @@ Three certificates are available for general SSL/TLS servers:
   `boundless.test`, for testing non-localhost connections. Services are
   on different test machines, e.g. Docker containers.
 
-The generic default password for encrypted server keys is **password**.
+The default password for encrypted server keys is **password**.
 
 All are signed under the `issuer-root-ca-chain.[crt|pem]` certificate chain.
 
