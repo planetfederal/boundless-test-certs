@@ -20,6 +20,10 @@ in a production environment.
 filter file open dialogs to specific extensions, e.g. pgAdmin3 always filters
 `.crt` or `.key` and QGIS generally filters on `.pem`.
 
+## Certificate Signing Hierarchy
+
+![Certs tree](certs_hierarchy.png)
+
 ## Client Certificates/Keys
 
 * User certs: `[alice|tom|jane|joe]-cert.[crt|pem]`
@@ -53,7 +57,7 @@ Three certificates are available for general SSL/TLS servers:
   machine.
 
 * `server-wildcard-boundless-test-[cert|key].[crt|pem]` provides for
-   ***.boundless.test** domains, e.g. `whatever.boundless.test` or
+   **\*.boundless.test** domains, e.g. `whatever.boundless.test` or
   `boundless.test`, for testing non-localhost connections. Services are
   on different test machines, e.g. Docker containers.
 
