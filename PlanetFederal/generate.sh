@@ -50,6 +50,7 @@ key_rsa="${prfx_name}-${key_sufx}.pem"
 key_rsa_pass="${prfx_name}-${key_sufx}_${w_pass}.pem"
 key_rsa_der="${prfx_name}-${key_sufx}.der"
 key_pub_rsa="${prfx_name}-${pubkey_sufx}.pem"
+key_pub_rsa_der="${prfx_name}-${pubkey_sufx}.der"
 
 # - for client cert
 cert_crt="${prfx_name}-${cert_sufx}.crt" # alternative PEM ext
@@ -98,9 +99,13 @@ openssl rsa -inform PEM -in ${key_pk8} -outform DER -out ${key_rsa_der}
 
 # Public key outputs from PEM
 
-# - RSA PKCS#1 DER
+# - RSA PKCS#1 PEM
 [ -f ${key_pub_rsa} ] && rm ${key_pub_rsa}
 openssl rsa -pubout -inform PEM -in ${key_rsa} -outform PEM -out ${key_pub_rsa}
+
+# - RSA PKCS#1 DER
+[ -f ${key_pub_rsa_der} ] && rm ${key_pub_rsa_der}
+openssl rsa -pubout -inform PEM -in ${key_rsa} -outform DER -out ${key_pub_rsa_der}
 
 
 # Client cert outputs from PEM
