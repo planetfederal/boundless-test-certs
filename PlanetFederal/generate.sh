@@ -19,7 +19,7 @@ if [ "${CONDA_PREFIX}" != "${conda_env}" ]; then
   conda activate "${conda_env}"
 fi
 
-name=joe-cac
+name=email-joe-cac
 
 prfx="planetfederal-test"
 prfx_name="${prfx}_${name}"
